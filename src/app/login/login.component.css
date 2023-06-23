@@ -1,0 +1,13 @@
+mat-tab-group {
+  border: 1px solid red;
+  width: 300px;
+}
+
+section {
+  border: 1px solid green;
+  /* width: 90%; */
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  min-height: 800px;
+}
