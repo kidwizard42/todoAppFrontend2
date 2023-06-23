@@ -7,6 +7,8 @@ import { LoginComponent } from './login/login.component';
 import { RouterModule, Routes } from '@angular/router';
 import { MatTabsModule } from '@angular/material/tabs';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpClientModule } from '@angular/common/http';
+import { CommonModule } from '@angular/common';
 
 const routes: Routes = [
   { path: 'home', component: LoginComponent },
@@ -18,8 +20,10 @@ const routes: Routes = [
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
     NoopAnimationsModule,
     MatTabsModule,
+    CommonModule,
     RouterModule.forRoot(routes),
   ],
   providers: [],

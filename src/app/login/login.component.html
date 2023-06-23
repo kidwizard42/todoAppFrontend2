@@ -2,7 +2,17 @@
   <mat-tab-group>
     <mat-tab label="Login">
       <input #loginInput type="text" placeholder="login" />
+      <button (click)="login()">Submit</button>
+
+      <div *ngIf="accountDoesNotExist">
+        <p>This account does not exist please create it.</p>
+      </div>
+
+      <div *ngIf="majorError">
+        <p>Something went wrong. Please try again</p>
+      </div>
     </mat-tab>
+
     <mat-tab label="Sign Up">
       <input #signInInput type="text" placeholder="sign up" />
     </mat-tab>
