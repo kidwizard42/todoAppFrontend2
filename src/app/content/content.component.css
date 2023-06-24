@@ -9,3 +9,9 @@ mat-form-field {
   /* max-width: 150px;
   max-height: 150px; */
 }
+
+::ng-deep .mat-datepicker-toggle {
+  /* border: 1px solid pink; */
+  font-size: 120px; /* Adjust the font size as needed */
+  padding: 4px; /* Adjust the padding as needed */
+}
