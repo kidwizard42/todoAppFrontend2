@@ -13,8 +13,8 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./login.component.css'],
 })
 export class LoginComponent {
-  // url = 'https://vast-tor-44253-f8cdd77f2554.herokuapp.com/users/';
-  url = 'https://localhost:7028/users/';
+  url = 'https://vast-tor-44253-f8cdd77f2554.herokuapp.com/users/';
+  // url = 'https://localhost:7028/users/';
   accountDoesNotExist = false;
   majorError = false;
   goToLogin = false;
@@ -43,7 +43,9 @@ export class LoginComponent {
           this.accountDoesNotExist = false;
           localStorage.setItem('name', response.name);
           localStorage.setItem('id', response.id);
-          window.location.href = 'http://localhost:4200/content';
+          // window.location.href = 'http://localhost:4200/content';
+          window.location.href =
+            'https://vast-tor-44253-f8cdd77f2554.herokuapp.com/content/';
         }
       },
       (error) => {
