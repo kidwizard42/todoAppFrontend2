@@ -1,0 +1,25 @@
+<h1 #h1></h1>
+<main>
+  <div>
+    <p>New Note</p>
+
+    <mat-form-field>
+      <mat-label>Input & change events</mat-label>
+      <input
+        matInput
+        [matDatepicker]="picker"
+        (dateChange)="addEvent($event)"
+      />
+      <mat-hint>MM/DD/YYYY</mat-hint>
+      <mat-datepicker-toggle
+        matIconSuffix
+        [for]="picker"
+      ></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+  </div>
+</main>
+
+<div>
+  <ul></ul>
+</div>
