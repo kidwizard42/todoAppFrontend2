@@ -4,3 +4,9 @@ main {
   justify-content: center;
   min-height: 800px;
 }
+
+.loop {
+  /* border: 1px solid pink; */
+  padding-top: 5px;
+  padding-bottom: 5px;
+}

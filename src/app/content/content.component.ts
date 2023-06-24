@@ -14,11 +14,9 @@ export class ContentComponent implements AfterViewInit {
   // h1: any;
   name: any;
   id: any;
-
-  events: string[] = [];
+  notes: any[] = [];
 
   addEvent(event: MatDatepickerInputEvent<Date>) {
-    // this.events.push(` ${event.value}`);
     console.log(event);
   }
   ngAfterViewInit() {
@@ -30,7 +28,8 @@ export class ContentComponent implements AfterViewInit {
     this.id = localStorage.getItem('id');
 
     this.http.get(this.url + this.id).subscribe(
-      (response) => {
+      (response: any) => {
+        this.notes = response;
         console.log(response);
       },
       (error) => {

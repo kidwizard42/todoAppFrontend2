@@ -1,6 +1,6 @@
 <h1 #h1></h1>
 <main>
-  <div>
+  <section>
     <p>New Note</p>
 
     <mat-form-field>
@@ -17,7 +17,16 @@
       ></mat-datepicker-toggle>
       <mat-datepicker #picker></mat-datepicker>
     </mat-form-field>
-  </div>
+  </section>
+  <section>
+    <ul>
+      <div *ngFor="let note of notes" class="loop">
+        Title: {{ note?.title }} <br />
+        note: {{ note?.description }} <br />
+        Due Date:{{ note.date }}
+      </div>
+    </ul>
+  </section>
 </main>
 
 <div>

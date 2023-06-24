@@ -35,7 +35,6 @@ export class LoginComponent {
         console.log(response);
 
         const data = response;
-        console.log(localStorage.getItem('lastname'));
 
         if (data.name == null) {
           this.accountDoesNotExist = true;
